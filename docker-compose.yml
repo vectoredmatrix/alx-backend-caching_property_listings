@@ -39,6 +39,9 @@ services:
     container_name: redis_container
     ports:
       - "6379:6379"
+    volumes:
+      - redis_data:/data # ✅ Persist Redis data here
 
 volumes:
   postgres_data:
+  redis_data:
